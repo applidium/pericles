@@ -3,6 +3,7 @@
 - if user.can_create? Project
   .row.margin-top-element
     .col-xs-12.flexcontainer.flexcontainer-justify-end
+      = link_to 'Import Swagger', new_import_swagger_projects_path, class: "btn btn-primary btn-lg"
       = link_to 'New Project', new_project_path, class: "btn btn-primary btn-lg"
 .row.margin-top-element
   .col-xs-12

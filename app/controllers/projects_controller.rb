@@ -34,6 +34,18 @@ class ProjectsController < ApplicationController
 
   def new; end
 
+  def new_import_swagger; end
+
+  def import_swagger
+    ImportSwaggerService.new(
+      project: project,
+      swagger_content: params.dig(:import_swagger, :content)
+    ).execute
+    redirect_to project
+  rescue ProjectRecordInvalidError
+    render 'new_import_swagger', status: :unprocessable_entity
+  end
+
   def edit
     project.build_proxy_configuration unless project.proxy_configuration
     project.build_api_gateway_integration unless project.api_gateway_integration

@@ -16,6 +16,8 @@ module Pericles_GWGw
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '**/')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'mapper', '**/')]
+    config.autoload_paths += Dir[Rails.root.join('app', 'errors', '**/')]
 
     # Enable the asset pipeline
     config.assets.enabled = true

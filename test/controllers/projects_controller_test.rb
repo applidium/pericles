@@ -228,4 +228,29 @@ class ProjectsControllerTest < ControllerWithAuthenticationTest
 
     assert_nil @project.reload.slack_channel
   end
+
+  test 'should import swagger' do
+    path = File.join(File.dirname(__FILE__), "../fixtures/apigateway.json")
+    swagger_content = File.read(path)
+
+    assert_difference('Project.count') do
+      assert_difference('ProxyConfiguration.count', 1) do
+        assert_difference('Resource.count', 40) do
+          assert_difference('ResourceRepresentation.count', 98) do
+            assert_difference('Attribute.count', 208) do
+              assert_difference('ApiError.count', 1) do
+                assert_difference('Route.count', 42) do
+                  post import_swagger_projects_path, params: { import_swagger: { content: swagger_content } }
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+
+    assert_no_difference('Project.count') do
+      post import_swagger_projects_path, params: { import_swagger: { content: swagger_content } }
+    end
+  end
 end

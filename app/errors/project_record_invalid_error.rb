@@ -1,0 +1,1 @@
+class ProjectRecordInvalidError < ActiveRecord::RecordInvalid; end

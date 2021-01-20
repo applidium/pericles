@@ -10,6 +10,14 @@ class ProjectPolicy < ApplicationPolicy
     true
   end
 
+  def new_import_swagger?
+    import_swagger?
+  end
+
+  def import_swagger?
+    create?
+  end
+
   def create?
     user&.internal?
   end

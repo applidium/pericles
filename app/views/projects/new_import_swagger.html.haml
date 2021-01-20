@@ -1,0 +1,9 @@
+= content_for :title, "Import Swagger"
+
+%h1 Import Swagger
+
+= bootstrap_form_for :import_swagger, url: "import_swagger" do |f|
+  = render 'shared/errors', object: project
+  = f.text_area :content, size: "100x20"
+  %br
+  = f.submit
