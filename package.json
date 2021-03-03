@@ -24,7 +24,7 @@
     "@rails/webpacker": "4.3.0",
     "core-js": "^2.5.3",
     "json-schema-faker": "git+https://github.com/json-schema-faker/json-schema-faker.git#a6a6635b055b1d20ba24ec23e89f00e87a91fd08",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "underscore": "^1.8.3",
     "vue": "^2.6.10",
