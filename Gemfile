@@ -21,7 +21,7 @@ gem 'regex_field', '~> 0.1.0'
 gem 'ancestry', '~> 3.2.1'
 gem 'draper', '~> 3.0'
 gem 'neatjson', '~> 0.8'
-gem 'addressable', '~> 2.5', '>= 2.5.2'
+gem 'addressable', '~> 2.8'
 gem 'json-schema-generator'
 gem 'jsoneditor-rails'
 
