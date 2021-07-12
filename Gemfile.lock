@@ -51,8 +51,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ancestry (3.2.1)
       activerecord (>= 4.2.0)
     ansi (1.5.0)
@@ -266,7 +266,7 @@ GEM
     polyamorous (2.3.0)
       activerecord (>= 5.0)
     powerpack (0.1.1)
-    public_suffix (3.0.2)
+    public_suffix (4.0.6)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     pxeger (0.1.0)
@@ -404,7 +404,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
-  addressable (~> 2.5, >= 2.5.2)
+  addressable (~> 2.8)
   ancestry (~> 3.2.1)
   audited (~> 4.10)
   autoprefixer-rails
